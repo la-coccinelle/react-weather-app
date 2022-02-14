@@ -44,5 +44,5 @@ export default function WeatherForecast(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  return "Loading for forecast";
+  return null;
 }

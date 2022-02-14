@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Weather from "./Weather";
 
@@ -11,7 +12,7 @@ function App() {
           <a
             href="https://github.com/la-coccinelle/react-weather-app"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             open-sourced on GitHub
           </a>
