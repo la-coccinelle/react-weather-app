@@ -6,12 +6,12 @@ import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 
 export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState({ result: false });
+  const [weatherData, setWeatherData] = useState({ loaded: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
-      result: true,
+      loaded: true,
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -38,7 +38,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  if (weatherData.result) {
+  if (weatherData.loaded) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
